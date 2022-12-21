@@ -1,0 +1,49 @@
+#myDiv{
+    border: aqua double 2px;
+}
+.goodP{
+    background-color: blueviolet;
+}
+
+.errorP{
+    background-color: red;
+}
+
+ul{
+    width: fit-content;
+    background-color: bisque;
+}
+li:hover{
+    background-color: cadetblue;
+}
+ul:first-child{
+
+    background-color: #523bb6;
+}
+.head__div{
+    width: 30%;
+    margin: auto;
+
+    font-size: xx-large;
+}
+.main__div{
+    font-family: "Arial Black";
+
+    margin:auto;
+    width: 80%;
+    padding: 50px;
+    padding-top: 0px;
+}
+.child__div{
+    background-color: gold;
+    border-color: black;
+    border-style: ridge;
+    border-width: 4px;
+    border-radius: 10px;
+    display:inline-block;
+    margin: 30px;
+    padding: 30px;
+
+    font-size: large;
+    width: 110px;
+ }
