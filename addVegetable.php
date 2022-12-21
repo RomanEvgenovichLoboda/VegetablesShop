@@ -1,21 +1,26 @@
 <html>
 <head>
-    <title>DZ_Z1</title>
-    <link href="style.css" rel="stylesheet"/>
-</head>
-<body>
+    <title>Vegetables Shop</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"></head>
+<body class="bg-black">
 <form method="post" action="#">
-    <h3>Add Vegetable:</h3>
-    <p><input type="text" name="name" placeholder="Add Name" /></p>
 
-    <p><input type="number" name="price" placeholder="Add Prise" /></p>
-
-    <p><button type="submit" name="addVegetable"> Add </button></p>
-</form>
-<div id="myDiv">
+    <div class="card text-bg-dark p-3" style="max-width: 18rem;">
+        <div class="card-header"><h4>Add Vegetable:</h4></div>
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control log" name="name" placeholder="Vegetable" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control pass" name="price" placeholder="Price" aria-label="Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="mt-4">
+                <button type="submit" name="addVegetable"" class="btn btn-outline-primary">Add</button>
+            </div>
+        </div>
+    </div>
     <?php
     if(isset($_POST['addVegetable'])){
-        //echo '<p>Thank you for subscribing</p>';
         $vegetable = trim(htmlspecialchars($_POST['name']));
         $price = intval($_POST['price']);
         if($vegetable==""||$price=="") exit();
@@ -27,7 +32,6 @@
 //        if($err){
 //            echo 'Error code:'.$err.'<br>';
 //        }
-
 
         if($results=$conn->query($sql_code)){
             echo '<p>Data added</p>';
@@ -43,8 +47,10 @@
         $conn->close();
 
     }
-
     ?>
+</form>
+<div id="myDiv">
+
 </div>
 
 </body>
